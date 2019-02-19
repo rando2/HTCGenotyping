@@ -1,5 +1,4 @@
-Halie Rando
-Spring 2019
+Halie Rando, Spring 2019
 
 ## MOTIVATION
 Here are some scripts I wrote to help manage variant calling with GATK on the BioCluster. We had a lot of issues optimizing this pipeline because GATK is not very performant (a.k.a. it often uses only one CPU even if you give it more than one). The pipeline here brute-forces  the issue by breaking each individual up into pieces and requesting the amount of memory and CPUs that we found to be roughly cost-optimal. 
@@ -16,4 +15,4 @@ If you are new to cluster computing, I highly recommend signing up for the [HPCB
 Additionally, you can come to the [Bioinformatics Coffee Hour](https://bioinfcoffeehour.slack.com) to ask for help. As of Spring 2019, we meet at 2:30pm on Wednesdays in Array Cafe.
 
 ## USING THE PIPELINE
-Start with the array_submit.sh script. This is the hub that queues all of the jobs with interlocking dependencies, so that (if all goes well), you can run this script once and then take the weekend off. Of course, it might take a little work at first to make sure the script is able to find everything it needs to run!
+Start with the queue_jobs.sh script. This is the hub that queues all of the jobs with interlocking dependencies, so that (if all goes well), you can run this script once and then take the weekend off. Of course, it might take a little work at first to make sure the script is able to find everything it needs to run!
