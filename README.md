@@ -1,5 +1,7 @@
 Halie Rando, Spring 2019
 
+# This repository is a work in progress. These scripts are not yet portable. If you are familiar with cluster computing and would like some ideas about how to run GATK4 efficiently for variant calling, then they may be useful to you. If you are looking for an easy-to-use package, this isn't ready yet!
+
 ## MOTIVATION
 Here are some scripts I wrote to help manage variant calling with GATK on the BioCluster. We had a lot of issues optimizing this pipeline because GATK is not very performant (a.k.a. it often uses only one CPU even if you give it more than one). The pipeline here brute-forces  the issue by breaking each individual up into pieces and requesting the amount of memory and CPUs that we found to be roughly cost-optimal. 
 
